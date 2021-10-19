@@ -5,10 +5,13 @@ rover_y = 10;
 rover_width = 100;
 rover_height = 90;
 
+bg_imgs_array = ["Mars_API_Image_1.jpg", "Mars_API_Image_2.jpg", "Mars_API_Image_3.jpg", "Mars_API_Image_4.jpg"];
+random_number = Math.floor(Math.random() * 4);
+
 function add(){
     background_imgTag = new Image();
     background_imgTag.onload = uploadBackground;
-    background_imgTag.src = "mars.jpg";
+    background_imgTag.src = bg_imgs_array[random_number];
 
     rover_imgTag = new Image();
     rover_imgTag.onload = uploadRover;
